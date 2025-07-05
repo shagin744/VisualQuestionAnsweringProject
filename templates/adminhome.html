@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+ <title>Visual Question Answering</title>
+
+    <!-- ====== Google Fonts ====== -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+    <!-- ====== ALL CSS ====== -->
+   <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/lightbox.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/responsive.css') }}">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar-nav">
+
+     <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div>
+    </div>
+    <!-- // Preloader -->
+
+
+    <!-- ====== Header ====== -->
+    <header id="header" class="header">
+        <!-- ====== Navbar ====== -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="index.html">
+                   <!--<img src="{{ url_for('static',filename='assets/images/logo.png') }}" alt="logo">-->
+                    <h1 style="color:rgb(240,197,36)">VQA</h1>
+                </a>
+                <!-- // Logo -->
+
+                <!-- Mobile Menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"><span><i class="fa fa-bars"></i></span></button>
+                <!-- Mobile Menu -->
+
+                <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="/adminviewuser" style="font-weight:bold;">View User</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/adminviewsearchimage" style="font-weight:bold;">View Image Search</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/adminviewsearchvideo" style="font-weight:bold;">View Video Search</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/index" style="font-weight:bold;">Logout</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ====== // Navbar ====== -->
+    </header>
+    <!-- ====== // Header ====== -->
+
+    <!-- ====== Hero Area ====== -->
+    <div class="hero-aria" id="home">
+        <!-- Hero Area Content -->
+        <div class="container">
+            <div class="hero-content h-100">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                   <h2 class="text-uppercase" style="font-size:65px;">Visual Question Answering</h2>
+                        <h3 class="text-uppercase"><span class="typed"></span></h3>
+
+                        <a href="" class="button smooth-scroll">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // Hero Area Content -->
+        <!-- Hero Area Slider -->
+        <div class="hero-area-slids owl-carousel">
+            <div class="single-slider">
+                <!-- Single Background -->
+                <div class="slider-bg" style="background-image: url({{ url_for('static',filename='assets/images/hero-area/img-1.jpg') }})"></div>
+                <!-- // Single Background -->
+            </div>
+            <div class="single-slider">
+                <!-- Single Background -->
+                <div class="slider-bg" style="background-image: url({{ url_for('static',filename='assets/images/hero-area/img-2.jpg') }})"></div>
+                <!-- // Single Background -->
+            </div>
+        </div>
+        <!-- // Hero Area Slider -->
+    </div>
+    <!-- ====== //Hero Area ====== -->
+
+
+
+    <!-- ====== Fact Counter Section ====== -->
+    <!-- ====================================================================
+            NOTE: You need to change  'data-count="10"' and 'p' Eliments
+        ===================================================================== -->
+
+    <!-- ====== //Fact Counter Section ====== -->
+
+
+    <!-- ====== Portfolio Section ====== -->
+    <section id="portfolio" class="section-padding pb-85 portfolio-area bg-light">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 ">
+                    <div class="section-title text-center">
+
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- //Section Title -->
+            <div class="row justify-content-center">
+                <!-- Work List Menu-->
+                <div class="col-lg-8">
+                    <div class="work-list text-center">
+                       <!-- <ul>
+                            <li class="filter" class="active" data-filter="all">ALL</li>
+                            <li class="filter" data-filter=".web">Web Design</li>
+                            <li class="filter" data-filter=".graphic">Graphic</li>
+                            <li class="filter" data-filter=".logo">Logo</li>
+                            <li class="filter" data-filter=".wp">Wordpress</li>
+                            <li class="filter" data-filter=".other">Other</li>
+                        </ul> -->
+                    </div>
+                </div>
+                <!-- // Work List Menu -->
+            </div>
+            <div class="row portfolio">
+                <!-- Single Portfolio -->
+                <div class="col-lg-4 col-md-6 mix wp graphic">
+                    <div class="single-portfolio" style="background-image: url({{ url_for('static',filename='assets/images/portfolio/img-1.jpg') }})">
+                        <div class="portfolio-icon text-center">
+                            <a data-lightbox='lightbox' href="{{ url_for('static',filename='assets/images/portfolio/img-1.jpg') }}"><i class="fas fa-expand-arrows-alt"></i></a>
+                        </div>
+                        <div class="portfolio-hover">
+                            <h4>VQA </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Portfolio -->
+                <!-- Single Portfolio -->
+                <div class="col-lg-4 col-md-6 mix logo web graphic other wp">
+                    <div class="single-portfolio" style="background-image: url({{ url_for('static',filename='assets/images/portfolio/img-2.jpg') }})">
+                        <div class="portfolio-icon text-center">
+                            <a data-lightbox='lightbox' href="{{ url_for('static',filename='assets/images/portfolio/img-2.jpg') }}"><i class="fas fa-expand-arrows-alt"></i></a>
+                        </div>
+                        <div class="portfolio-hover">
+                           <h4>VQA </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Portfolio -->
+                <!-- Single Portfolio -->
+                <div class="col-lg-4 col-md-6 mix wp other">
+                    <div class="single-portfolio" style="background-image: url({{ url_for('static',filename='assets/images/portfolio/img-3.jpg') }})">
+                        <div class="portfolio-icon text-center">
+                            <a data-lightbox='lightbox' href="{{ url_for('static',filename='assets/images/portfolio/img-3.jpg') }}
+"><i class="fas fa-expand-arrows-alt"></i></a>
+                        </div>
+                        <div class="portfolio-hover">
+                              <h4>VQA </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Portfolio -->
+                <!-- Single Portfolio -->
+                <div class="col-lg-4 col-md-6 mix logo other graphic wp web">
+                    <div class="single-portfolio" style="background-image: url({{ url_for('static',filename='assets/images/portfolio/img-4.jpg') }}
+)">
+                        <div class="portfolio-icon text-center">
+                            <a data-lightbox='lightbox' href="{{ url_for('static',filename='assets/images/portfolio/img-4.jpg') }}
+"><i class="fas fa-expand-arrows-alt"></i></a>
+                        </div>
+                        <div class="portfolio-hover">
+                            <h4>VQA </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Portfolio -->
+                <!-- Single Portfolio -->
+                <div class="col-lg-4 col-md-6 mix logo other wp graphic web">
+                    <div class="single-portfolio" style="background-image: url({{ url_for('static',filename='assets/images/portfolio/img-5.jpg') }}
+)">
+                        <div class="portfolio-icon text-center">
+                            <a data-lightbox='lightbox' href="{{ url_for('static',filename='assets/images/portfolio/img-5.jpg') }}
+"><i class="fas fa-expand-arrows-alt"></i></a>
+                        </div>
+                        <div class="portfolio-hover">
+                              <h4>VQA </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Portfolio -->
+                <!-- Single Portfolio -->
+                <div class="col-lg-4 col-md-6 mix wp logo graphic web">
+                    <div class="single-portfolio" style="background-image: url({{ url_for('static',filename='assets/images/portfolio/img-6.jpg') }})">
+                        <div class="portfolio-icon text-center">
+                            <a data-lightbox='lightbox' href="{{ url_for('static',filename='assets/images/portfolio/img-6.jpg') }}"><i class="fas fa-expand-arrows-alt"></i></a>
+                        </div>
+                        <div class="portfolio-hover other">
+                           <h4>VQA </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Portfolio -->
+                <!-- Single Portfolio -->
+                <div class="col-lg-4 col-md-6 mix web wp">
+                    <div class="single-portfolio" style="background-image: url({{ url_for('static',filename='assets/images/portfolio/img-7.jpg') }})">
+                        <div class="portfolio-icon text-center">
+                            <a data-lightbox='lightbox' href="{{ url_for('static',filename='assets/images/portfolio/img-7.jpg') }}"><i class="fas fa-expand-arrows-alt"></i></a>
+                        </div>
+                        <div class="portfolio-hover">
+                           <h4>VQA </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Portfolio -->
+                <!-- Single Portfolio -->
+                <div class="col-lg-4 col-md-6 mix logo graphic wp web">
+                    <div class="single-portfolio" style="background-image: url({{ url_for('static',filename='assets/images/portfolio/img-8.jpg') }})">
+                        <div class="portfolio-icon text-center">
+                            <a data-lightbox='lightbox' href="{{ url_for('static',filename='assets/images/portfolio/img-8.jpg') }}"><i class="fas fa-expand-arrows-alt"></i></a>
+                        </div>
+                        <div class="portfolio-hover">
+                          <h4>VQA </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Portfolio -->
+                <!-- Single Portfolio -->
+                <div class="col-lg-4 col-md-6 mix other logo web">
+                    <div class="single-portfolio" style="background-image: url({{ url_for('static',filename='assets/images/portfolio/img-9.jpg') }})">
+                        <div class="portfolio-icon text-center">
+                            <a data-lightbox='lightbox' href="{{ url_for('static',filename='assets/images/portfolio/img-9.jpg') }}"><i class="fas fa-expand-arrows-alt"></i></a>
+                        </div>
+                        <div class="portfolio-hover">
+                          <h4>VQA </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Portfolio -->
+            </div>
+        </div>
+    </section>
+    <!-- ====== // Portfolio Section ====== -->
+
+
+
+
+
+
+    <section class="section-padding pb-70 bg-img fact-counter" id="counter"  style="background-image: url({{ url_for('static',filename='assets/images/fan-fact-bg.jpg') }}) ; height:10px;">
+          </section>
+
+    <!-- ====== Footer Area ====== -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p class="text-white"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== // Footer Area ====== -->
+
+
+
+
+
+
+     <!-- ====== ALL JS ====== -->
+  <script src="{{ url_for('static',filename='assets/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/lightbox.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/jquery.mixitup.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/wow.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/typed.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/skill.bar.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/fact.counter.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/js/main.js') }}"></script>
+</body>
+
+</html>
